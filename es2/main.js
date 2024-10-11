@@ -49,13 +49,16 @@ for (i = 0; i < teams.length; i++){
     
 };
 
+let foulsArray = [];
 for (i = 0; i < teams.length; i++){
     let randomFouls = Math.floor(Math.random() * 20);
     console.log(randomFouls);
     teams.falliSubiti = randomFouls;
+    foulsArray.push(randomFouls)
     //console.log(teams);
-    
 };
+console.log(foulsArray);
+
 
 /* const newArray = [];
 newArray.push(randomFouls);
