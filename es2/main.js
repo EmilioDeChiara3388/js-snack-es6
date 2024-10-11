@@ -31,26 +31,35 @@ const teams = [
     }
 ];
 
-//let newPoints = teams.puntiFatti;
+let namesArray = [];
 for (i = 0; i < teams.length; i++){
-    let randomPoints = Math.floor(Math.random() * 10);
-    console.log(randomPoints);
-    teams.puntiFatti = randomPoints;
-    console.log(teams);
+    let team = teams[i];
+    namesArray.push(team.nome);
     
 };
-let randomFouls = Math.floor(Math.random() * 10);
+console.log(namesArray);
+
+
+//let newPoints = teams.puntiFatti;
 for (i = 0; i < teams.length; i++){
-    
-    console.log(randomFouls);
-    teams.falliSubiti = randomFouls;
-    console.log(teams);
+    let randomPoints = Math.floor(Math.random() * 20);
+    console.log(randomPoints);
+    teams.puntiFatti = randomPoints;
+    //console.log(teams);
     
 };
 
-const newArray = [];
+for (i = 0; i < teams.length; i++){
+    let randomFouls = Math.floor(Math.random() * 20);
+    console.log(randomFouls);
+    teams.falliSubiti = randomFouls;
+    //console.log(teams);
+    
+};
+
+/* const newArray = [];
 newArray.push(randomFouls);
-console.log(newArray);
+console.log(newArray); */
 
 
 
