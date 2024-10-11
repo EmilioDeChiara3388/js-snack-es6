@@ -39,14 +39,19 @@ for (i = 0; i < teams.length; i++){
     console.log(teams);
     
 };
-
+let randomFouls = Math.floor(Math.random() * 10);
 for (i = 0; i < teams.length; i++){
-    let randomFouls = Math.floor(Math.random() * 10);
+    
     console.log(randomFouls);
     teams.falliSubiti = randomFouls;
     console.log(teams);
     
 };
+
+const newArray = [];
+newArray.push(randomFouls);
+console.log(newArray);
+
 
 
 

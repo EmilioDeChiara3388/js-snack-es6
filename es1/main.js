@@ -10,34 +10,38 @@ Stampare a schermo la bici con peso minore.
 const bicycles = [
     {
         "nome": "Primavera",
-        "peso": 47
+        peso: 47
     },
     {
         "nome": "Estate",
-        "peso": 51
+        peso: 51
     },
     {
         "nome": "Autunno",
-        "peso": 33
+        peso: 33
     },
     {
         "nome": "Inverno",
-        "peso": 60
+        peso: 60
     }
 ]
 
 
-let singleBicycle = bicycles.peso;
+
 for (let i = 0; i < bicycles.length; i++){
     
-    if (singleBicycle[i] < singleBicycle[i + 1]){
-        console.log(singleBicycle[i]);
-        
+    if (bicycles[i].peso < bicycles[i + 1].peso){
+        console.log(bicycles[i].nome);
+        let resultEl = document.querySelector(".result");
+        resultEl.innerHTML = `<h2>La bicicletta più leggera è ${bicycles[i].nome}</h2>`
     } else {
-        console.log(singleBicycle[i + 1]);
-        
+        console.log(bicycles[i + 1].nome);
+        let resultEl = document.querySelector(".result");
+        resultEl.innerHTML = `<h2>La bicicletta più leggera è ${bicycles[i + 1].nome}</h2>`
     };
-    
-     
-    
 };
+
+
+
+
+
