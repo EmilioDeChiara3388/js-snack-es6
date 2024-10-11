@@ -60,9 +60,9 @@ for (i = 0; i < teams.length; i++){
 console.log(foulsArray);
 
 
-/* const newArray = [];
-newArray.push(randomFouls);
-console.log(newArray); */
+const finalArray = namesArray.concat(foulsArray);
+console.log(finalArray);
+
 
 
 
