@@ -26,8 +26,18 @@ const bicycles = [
     }
 ]
 
+
+let singleBicycle = bicycles.peso;
 for (let i = 0; i < bicycles.length; i++){
-    let singleBicycle = bicycles[i];
-    console.log(singleBicycle.peso);
     
-}
+    if (singleBicycle[i] < singleBicycle[i + 1]){
+        console.log(singleBicycle[i]);
+        
+    } else {
+        console.log(singleBicycle[i + 1]);
+        
+    };
+    
+     
+    
+};
