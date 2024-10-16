@@ -9,37 +9,40 @@ Stampare a schermo la bici con peso minore.
 
 const bicycles = [
     {
-        "nome": "Primavera",
+        nome: "Primavera",
         peso: 47
     },
     {
-        "nome": "Estate",
+        nome: "Estate",
         peso: 51
     },
     {
-        "nome": "Autunno",
+        nome: "Autunno",
         peso: 33
     },
     {
-        "nome": "Inverno",
+        nome: "Inverno",
         peso: 60
     }
 ]
 
-
+let lightBycicle = bicycles[0].peso;
 
 for (let i = 0; i < bicycles.length; i++){
-    
-    if (bicycles[i].peso < bicycles[i + 1].peso){
-        console.log(bicycles[i].nome);
-        let resultEl = document.querySelector(".result");
-        resultEl.innerHTML = `<h2>La bicicletta più leggera è ${bicycles[i].nome}</h2>`
-    } else {
-        console.log(bicycles[i + 1].nome);
-        let resultEl = document.querySelector(".result");
-        resultEl.innerHTML = `<h2>La bicicletta più leggera è ${bicycles[i + 1].nome}</h2>`
-    };
-};
+    if (bicycles[i].peso < lightBycicle){
+        lightBycicle = bicycles[i].peso;
+    } 
+}
+console.log(lightBycicle);
+
+let resultOnPage = bicycles.find(bycicle => bycicle.peso === lightBycicle);
+console.log(resultOnPage);
+
+
+let resultEl = document.querySelector(".result");
+resultEl.innerHTML = `<h2>La bicicletta più leggera è ${resultOnPage.nome}</h2>`
+
+
 
 
 
